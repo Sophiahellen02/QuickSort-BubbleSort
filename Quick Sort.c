@@ -11,8 +11,8 @@ void swap(int* a, int* b) {
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];   // Escolhe o último elemento como pivô
     int i = (low - 1);      // Índice do menor elemento
-
-    for (int j = low; j <= high - 1; j++) {
+    int j;
+    for (j = low; j <= high - 1; j++) {
         // Se o elemento atual é menor ou igual ao pivô
         if (arr[j] <= pivot) {
             i++;  // Incrementa o índice do menor elemento
@@ -37,7 +37,8 @@ void quickSort(int arr[], int low, int high) {
 
 // Função para imprimir o array
 void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
+    int i;
+    for (i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
@@ -54,7 +55,8 @@ int main() {
     // Recebe os elementos do array
     int arr[n];
     printf("Digite os elementos do array: ");
-    for (int i = 0; i < n; i++) {
+    int i;
+    for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 

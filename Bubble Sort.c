@@ -9,8 +9,10 @@ void swap(int* a, int* b) {
 
 // Função Bubble Sort
 void bubbleSort(int arr[], int n) {
-    for (int i = 0; i < n - 1; i++) {           // Itera sobre o array
-        for (int j = 0; j < n - i - 1; j++) {  // Itera sobre os elementos restantes
+    int i;
+    int j;
+    for (i = 0; i < n - 1; i++) {           // Itera sobre o array
+        for (j = 0; j < n - i - 1; j++) {  // Itera sobre os elementos restantes   
             if (arr[j] > arr[j + 1]) {        // Se o elemento atual é maior que o próximo
                 swap(&arr[j], &arr[j + 1]);  // Troca os elementos
             }
@@ -20,7 +22,8 @@ void bubbleSort(int arr[], int n) {
 
 // Função para imprimir o array
 void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {   // Itera sobre o array
+    int i;
+    for (i = 0; i < size; i++) {   // Itera sobre o array
         printf("%d ", arr[i]);
     }
     printf("\n");
@@ -37,7 +40,8 @@ int main() {
     // Recebe os elementos do array
     int arr[n];
     printf("Digite os elementos do array: ");
-    for (int i = 0; i < n; i++) {
+    int i;
+    for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Função para trocar dois elementos
+// Função para trocar dois elementos de posição
 void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
@@ -9,12 +9,11 @@ void swap(int* a, int* b) {
 
 // Função Bubble Sort
 void bubbleSort(int arr[], int n) {
-    int i;
-    int j;
+    int i, j;
     for (i = 0; i < n - 1; i++) {           // Itera sobre o array
-        for (j = 0; j < n - i - 1; j++) {  // Itera sobre os elementos restantes   
-            if (arr[j] > arr[j + 1]) {        // Se o elemento atual é maior que o próximo
-                swap(&arr[j], &arr[j + 1]);  // Troca os elementos
+        for (j = 0; j < n - i - 1; j++) {  // Itera sobre os elementos restantes
+            if (arr[j] > arr[j + 1]) {     // Se o elemento atual for maior que o próximo
+                swap(&arr[j], &arr[j + 1]); // Troca os elementos de posição
             }
         }
     }
@@ -23,21 +22,21 @@ void bubbleSort(int arr[], int n) {
 // Função para imprimir o array
 void printArray(int arr[], int size) {
     int i;
-    for (i = 0; i < size; i++) {   // Itera sobre o array
+    for (i = 0; i < size; i++) {   // Itera sobre o array imprimindo cada elemento
         printf("%d ", arr[i]);
     }
     printf("\n");
 }
 
-// função principal
+// Função principal
 int main() {
-
-    // Recebe o número de elementos
     int n;
+
+    // Recebe o número de elementos do usuário
     printf("Digite o número de elementos: ");
     scanf("%d", &n);
 
-    // Recebe os elementos do array
+    // Declara o array e recebe seus valores
     int arr[n];
     printf("Digite os elementos do array: ");
     int i;
@@ -49,7 +48,8 @@ int main() {
     printf("Lista original: ");
     printArray(arr, n);
 
-    bubbleSort(arr, n);     // Ordena o array usando Bubble Sort
+    // Chama a função Bubble Sort para ordenar o array
+    bubbleSort(arr, n);
 
     // Imprime o array ordenado
     printf("Lista ordenada: ");
